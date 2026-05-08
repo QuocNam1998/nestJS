@@ -1,5 +1,8 @@
 export interface Task {
   id: string;
   title: string;
-  status: 'OPEN' | 'DONE';
+  status?: TaskStatus;
+  description?: string;
 }
+
+export type TaskStatus = 'OPEN' | 'DONE' | 'IN_PROGRESS';
